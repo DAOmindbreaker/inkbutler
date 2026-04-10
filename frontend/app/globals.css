@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  --ink-bg:      #07090f;
+  --ink-surface: #0e1118;
+  --ink-border:  #1c2130;
+  --ink-text:    #e8eaf0;
+  --ink-muted:   #6b7280;
+  --ink-accent:  #7cffd4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--ink-bg);
+  color: var(--ink-text);
+  font-family: "Syne", sans-serif;
+  min-height: 100vh;
+  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124,255,212,0.06) 0%, transparent 70%);
+}
+
+.card-glow {
+  background: var(--ink-surface);
+  border: 1px solid var(--ink-border);
+  border-radius: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.card-glow:hover {
+  border-color: rgba(124,255,212,0.3);
+  box-shadow: 0 0 32px rgba(124,255,212,0.06);
+}
+
+.btn-accent {
+  background: var(--ink-accent);
+  color: #07090f;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.9rem;
+  transition: opacity 0.15s, transform 0.1s;
+  cursor: pointer;
+  border: none;
+}
+.btn-accent:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn-accent:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+.btn-danger {
+  background: transparent;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  border-radius: 10px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-danger:hover { background: rgba(239,68,68,0.1); }
+
+.stat-value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--ink-accent);
+}
